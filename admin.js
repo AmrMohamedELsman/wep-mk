@@ -118,4 +118,28 @@ function showSuccessMessage(message) {
     setTimeout(() => {
         successDiv.remove();
     }, 3000);
+
+}
+
+// حماية صفحة الإدارة
+function checkAdminAuth() {
+    const adminPassword = 'MK2024Admin'; // غير كلمة المرور هذه
+    const isAuthenticated = sessionStorage.getItem('adminAuth');
+    
+    if (!isAuthenticated) {
+        const enteredPassword = prompt('أدخل كلمة مرور الإدارة:');
+        if (enteredPassword === adminPassword) {
+            sessionStorage.setItem('adminAuth', 'true');
+        } else {
+            alert('كلمة مرور خاطئة!');
+            window.location.href = 'index.html';
+            return false;
+        }
+    }
+    return true;
+}
+
+// تشغيل الحماية عند تحميل الصفحة
+if (!checkAdminAuth()) {
+    throw new Error('غير مصرح بالدخول');
 }
