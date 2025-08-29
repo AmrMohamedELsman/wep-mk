@@ -2166,4 +2166,36 @@ p {
         bottom: 15px;
         right: 15px;
     }
+
 }
+
+/* إضافة قاعدة لاسم البراند في الوضع المظلم */
+[data-theme="dark"] .brand-name {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Dark Mode Styles for Navigation Links */
+[data-theme="dark"] .nav-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-link:hover {
+    color: var(--color-primary-light);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Styles for Mobile Navigation Menu */
+[data-theme="dark"] .nav-menu {
+    background: rgba(23, 23, 23, 0.98);
+    border: 1px solid var(--border-primary);
+}
+
+/* Dark Mode Styles for Hamburger Menu */
+[data-theme="dark"] .hamburger .bar {
+    background: var(--text-primary);
+}
+
+/* Dark Mode Styles for Hero Section */
