@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Local Brand </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="WhatsApp Image 2025-08-07 at 17.37.45_87e239fd.jpg" alt="MK Logo" class="logo-img">
+                    <span class="brand-name">MK Local Brand</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#products" class="nav-link">المنتجات</a></li>
+                    <li><a href="#about" class="nav-link">من نحن</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                    <li><a href="admin.html" class="nav-link admin-link"><i class="fas fa-cog"></i> الإدارة</a></li>
+                    <li>
+                        <button id="darkModeToggle" class="dark-mode-toggle" title="تبديل الوضع المظلم">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">MK Local Brand</h1>
+            <p class="hero-subtitle">أناقة محلية بلمسة عصرية</p>
+            <p class="hero-description">اكتشف مجموعتنا الحصرية من الملابس العصرية المصممة خصيصاً لك</p>
+            <a href="#products" class="cta-button">تصفح المنتجات</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-bg"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا</h2>
+            
+            <!-- Search and Filters Section -->
+            <div class="search-filters-container">
+                <!-- Search Input -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="ابحث عن منتج..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <!-- Price Filter -->
+                <div class="price-filter-container">
+                    <label class="filter-label">نطاق السعر:</label>
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="من" class="price-input">
+                        <span class="price-separator">-</span>
+                        <input type="number" id="maxPrice" placeholder="إلى" class="price-input">
+                        <span class="currency">جنيه</span>
+                    </div>
+                </div>
+                
+                <!-- Special Filters -->
+                <div class="special-filters">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="discountFilter">
+                        <span class="checkmark"></span>
+                        منتجات مخفضة فقط
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="bestsellerFilter">
+                        <span class="checkmark"></span>
+                        الأكثر مبيعاً فقط
+                    </label>
+                </div>
+                
+                <!-- Clear Filters Button -->
+                <button id="clearFilters" class="clear-filters-btn">
+                    <i class="fas fa-times"></i> مسح الفلاتر
+                </button>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="products-filter" id="productsFilter">
+                <!-- الفئات ستُضاف هنا ديناميكياً -->
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">من نحن</h2>
+                    <p>MK Local Brand هو براند محلي متخصص في تصميم وإنتاج الملابس العصرية. نحن نؤمن بأن الأناقة لا تقتصر على الماركات العالمية، بل يمكن أن تكون محلية وأصيلة.</p>
+                    <p>نسعى لتقديم منتجات عالية الجودة بأسعار مناسبة، مع التركيز على التصاميم العصرية التي تناسب الذوق المحلي.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <p class="section-subtitle">نحن هنا لخدمتك، تواصل معنا عبر أي من الطرق التالية</p>
+            
+            <div class="contact-content">
+                <!-- معلومات التواصل -->
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>اتصل بنا</h3>
+                        <p>+20 123 456 7890</p>
+                        <a href="tel:+201234567890" class="contact-btn primary">
+                            <i class="fas fa-phone"></i>
+                            اتصل الآن
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>راسلنا</h3>
+                        <p>info@mklocalbrand.com</p>
+                        <a href="mailto:info@mklocalbrand.com" class="contact-btn primary">
+                            <i class="fas fa-envelope"></i>
+                            أرسل إيميل
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>واتساب</h3>
+                        <p>تواصل سريع ومباشر</p>
+                        <a href="https://wa.me/201234567890" class="contact-btn whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- وسائل التواصل الاجتماعي -->
+                <div class="social-media-section">
+                    <h3>تابعنا على</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-btn facebook" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-btn tiktok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- معلومات الموقع -->
+                <div class="footer-main">
+                    <!-- <div class="footer-logo">
+                        <img src="codevia-logo.jpg" alt="Codevia Logo"  class="footer-logo-img">
+                        <span class="developer-name">Codevia</span>
+                    </div> -->
+                    <p class="footer-text">© 2025 Codevia. جميع الحقوق محفوظة.</p>
+                </div>
+                
+                <!-- معلومات المطور -->
+                <div class="developer-section">
+                    <div class="developer-card">
+                        <div class="developer-header">
+                            <div class="developer-logo">
+                                <img src="codevia-logo.jpg" alt="Codevia Logo" class="developer-logo-img">
+                                <div class="developer-info">
+                                    <h3 class="developer-name">Codevia</h3>
+                                    <p class="developer-subtitle"> contact us</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="developer-contacts">
+                            <div class="contact-row">
+                                <a href="https://wa.me/201040180521" target="_blank" class="dev-contact-btn whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                
+                                <a href="mailto:Codevia.tech@gmail.com" class="dev-contact-btn email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Codevia.tech@gmail.com</span>
+                                </a>
+                            </div>
+                            
+                            <div class="social-row">
+                                <a href="https://www.facebook.com/profile.php?id=61578573455848" target="_blank" class="dev-social-btn facebook">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                
+                                <a href="https://www.tiktok.com/@codevia6" target="_blank" class="dev-social-btn tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()" title="العودة للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  /* Background Colors for Dark Mode */
+  --bg-primary: var(--neutral-900);
+  --bg-secondary: var(--neutral-800);
+  --bg-tertiary: var(--neutral-700);
+  --bg-dark: var(--neutral-950);
+  --bg-overlay: rgba(255, 255, 255, 0.1);
+
+  /* Text Colors for Dark Mode */
+  --text-primary: var(--neutral-100);
+  --text-secondary: var(--neutral-300);
+  --text-tertiary: var(--neutral-400);
+  --text-inverse: var(--neutral-900);
+  --text-muted: var(--neutral-500);
+
+  /* Border Colors for Dark Mode */
+  --border-primary: var(--neutral-700);
+  --border-secondary: var(--neutral-600);
+  --border-focus: var(--neutral-400);
+
+  /* Card and Component Colors */
+  --card-bg: var(--neutral-800);
+  --card-border: var(--neutral-700);
+  --input-bg: var(--neutral-800);
+  --input-border: var(--neutral-600);
+
+  /* Shadow Colors for Dark Mode */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+
+  /* Gradient Colors for Dark Mode */
+  --gradient-primary: linear-gradient(135deg, var(--neutral-700) 0%, var(--neutral-800) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--neutral-600) 0%, var(--neutral-700) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--neutral-500) 0%, var(--neutral-600) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--neutral-800) 0%, var(--neutral-900) 50%, var(--neutral-950) 100%);
+  --gradient-card: linear-gradient(145deg, var(--neutral-800) 0%, var(--neutral-700) 100%);
+}

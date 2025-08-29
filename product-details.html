@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - MK Local Brand</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="WhatsApp Image 2025-08-07 at 17.37.45_87e239fd.jpg" alt="MK Logo" class="logo-img">
+                    <span class="brand-name">MK Local Brand</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">الرئيسية</a></li>
+                    <li><a href="index.html#products" class="nav-link">المنتجات</a></li>
+                    <li><a href="index.html#about" class="nav-link">من نحن</a></li>
+                    <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
+                    <li><a href="admin.html" class="nav-link admin-link"><i class="fas fa-cog"></i> الإدارة</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container">
+            <div class="back-button">
+                <a href="index.html#products" class="btn-back">
+                    <i class="fas fa-arrow-right"></i> العودة للمنتجات
+                </a>
+            </div>
+            
+            <div class="product-details-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="صورة المنتج">
+                        <div class="image-zoom" id="imageZoom"></div>
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 id="productName" class="product-title"></h1>
+                        <div id="bestsellerBadge" class="bestseller-badge" style="display: none;">
+                            الأكثر مبيعاً ⭐
+                        </div>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span id="productPrice" class="price"></span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <h3>وصف المنتج</h3>
+                        <p id="productDescription"></p>
+                    </div>
+                    
+                    <div class="product-details-info">
+                        <h3>تفاصيل إضافية</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">الفئة:</span>
+                                <span id="productCategory" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">حالة التوفر:</span>
+                                <span id="productAvailability" class="detail-value"></span>
+                            </div>
+                            <div class="detail-item" id="productSizesContainer" style="display: none;">
+                                <span class="detail-label">المقاسات المتاحة:</span>
+                                <div id="productSizes" class="sizes-display"></div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">رقم المنتج:</span>
+                                <span id="productId" class="detail-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-primary" onclick="contactWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> اطلب عبر واتساب
+                        </button>
+                        <button class="btn-secondary" onclick="shareProduct()">
+                            <i class="fas fa-share"></i> مشاركة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>منتجات مشابهة</h2>
+            <div id="relatedProductsGrid" class="products-grid">
+                <!-- Related products will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>
